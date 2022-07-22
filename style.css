@@ -1,0 +1,526 @@
+/* Standard Colors */
+:root{
+  --shadow: 0 0px 40px rgba(0, 92, 179, 0.7);
+  --shadowsmall: 0 0px 10px rgba(0, 92, 179, 0.7);
+  --shadowtiny: 0 0px 5px rgba(0, 92, 179, 0.7);
+
+  --accent: rgba(1, 131, 253, 0.8);
+  --accentdim1: rgb(195, 222, 248);
+  --accentdim2: rgb(239, 247, 255);
+  --accentdark: rgb(17, 64, 109);
+
+  --black: rgba(1, 2, 29, 0.8);
+  --blackdark: rgb(0, 11, 19) ;
+  --gray: rgba(39, 53, 59, 0.8);
+
+  --green: rgba(120, 235, 53, 0.8);
+  --greendark: rgba(67, 168, 8, 0.8);
+
+  --red: rgba(240, 2, 2, 0.7);
+  --reddark: rgba(184, 10, 10, 0.7);
+
+  --white:rgb(252, 255, 255);
+  --yellow: rgb(238, 255, 0);
+  --orange: rgb(255, 157, 0);
+  --navy: rgba(5, 7, 129, 0.8);
+  --purple: rgb(157, 20, 236);
+
+  --transition: 0.1s;
+  --slowtransition: 0.5s;
+
+  --dark-body: #4d4c5a;
+  --dark-main: #141529;
+  --dark-second: #79788c;
+  --dark-hover: #323048;
+  --dark-text: #f8fbff;
+
+  --light-body: #f3f8fe;
+  --light-main: #fdfdfd;
+  --light-second: #c3c2c8;
+  --light-hover: #edf0f5;
+  --light-text: #151426;
+}
+
+
+/* motionText */
+@-webkit-keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+.motionText {
+  font-size: 60px;
+  font-weight: 600;
+  background: linear-gradient(to right, rgb(6, 64, 79) 20%, rgb(9, 87, 121) 40%,
+  rgba(0,212,255,1) 60%, rgb(0, 179, 255) 80%,  rgb(6, 64, 79) 100%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 5s linear infinite;
+          animation: shine 5s linear infinite;
+}
+
+
+
+/* Slides */
+@keyframes slide1 {
+0% {
+  transform: translateY(50%);
+}
+100% {
+  transform: translateY(0);
+}
+}
+  .moveUp {
+    animation: 0.4s ease-out 0s 1 slide1;
+  }
+
+@keyframes slide2 {
+0% {
+  transform: translateY(-50%);
+}
+100% {
+  transform: translateY(0);
+}
+}
+  .moveDown {
+    animation: 0.4s ease-out 0s 1 slide2;
+  }
+
+@keyframes slide3 {
+0% {
+  transform: translateX(50%);
+}
+100% {
+  transform: translateX(0);
+}
+}
+  .moveLeft  {
+    animation: 0.4s ease-out 0s 1 slide3;
+  }
+
+@keyframes slide4 {
+0% {
+  transform: translateX(-50%);
+}
+100% {
+  transform: translateX(0);
+}
+}
+  .moveRight {
+    animation: 0.4s ease-out 0s 1 slide4;
+  }
+
+
+
+/* Rotation */
+@keyframes rotate1 {
+  0% {
+    transform: rotate(45deg);
+    opacity:0;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity:1;
+  }
+}
+  .rotateCCW {
+    animation: 1s ease-out 1 rotate1;
+  }
+
+@keyframes rotate2 {
+  0% {
+    transform: rotate(-45deg);
+    opacity:0;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity:1;
+  }
+}
+  .rotateCW {
+    animation: 1s ease-out 1 rotate2;
+  }
+
+
+
+/* Bootstrap */
+  /* modal  */
+.modal{
+backdrop-filter: blur(3px);
+}
+/* button  */
+.btn-custom {
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.btn {
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transition: 0.3s;
+}
+
+.iPop i {
+    position: relative;
+    margin-left: 5px;
+    margin-right: 10px;
+    left: 4px;
+    transition: 0.3s;
+}
+
+.iPop:hover i {
+    left: 10px;
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+
+/* navbar */
+#customNav {
+    background-color: rgba(234, 249, 255, .6) !important;
+    backdrop-filter: blur(5px) !important
+}
+
+/* logo */
+#hrtLogo {
+    width: 50px;
+    border-radius: 50%;
+    filter: brightness(1.2);
+    box-shadow: var(--shadowsmall);
+    transition: 0.3s;
+}
+
+#hrtLogo:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadowsmall);
+    transition: 0.3s;
+}
+
+/* items */
+.nav-item {
+    background-color: var(--accentdim2);
+    padding: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 15px;
+    transition: 0.5s;
+    text-align: center;
+}
+
+/* Menu  */
+#menu li.active {
+    background-color: var(--accentdim1);
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+#menu a.active {
+    font-weight: 800;
+    color: var(--white);
+}
+
+.navMargin {
+    margin-left: 10px;
+    margin: 10px;
+}
+
+.barItem a {
+    color: var(--white) !important;
+    background-color: var(--accentdark);
+
+    padding: 6px 15px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    border-radius: 15px;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.barItem a:hover {
+    color: var(--accentdark) !important;
+    background-color: var(--accentdim1);
+    box-shadow: var(--shadowtiny);
+    
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+body {
+    margin-top: 66px;
+}
+
+
+/* Sections */
+.mainSection{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.subSection{
+  background-color: var(--white);
+  box-shadow: var(--shadowtiny);
+  border-radius: 20px;
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  height: 100%;
+  font-size: 15px;
+}
+.subSection h1{
+    margin-bottom: 25px;
+    text-align: center;
+}
+.codeSection {
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    user-select: text;
+    transition: 0.2s;
+    box-shadow: var(--shadowsmall);
+}
+.codeSection:hover {
+    box-shadow: var(--shadowtiny);
+    border-radius: 20px;
+    transition: 0.2s;
+}
+.Heading {
+    text-align: center;
+}
+.pushDown {
+    margin-top: 60px;
+}
+.pushDown80 {
+    margin-top: 80px;
+}
+.pushDown100 {
+    margin-top: 100px;
+}
+.codeSnippet {
+    margin-top: 20px;
+}
+
+.codeSection textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    user-select: all;
+    margin-top: 20px;
+
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+}
+.codeSection textarea:focus {
+    user-select: all;
+    border: none;
+    box-shadow: var(--shadowsmall);
+    border-radius: 10px;
+}
+
+code {
+    color: var(--white);
+    background-color: var(--accentdark);
+    font-size: 14px;
+    user-select: all;
+    font-family: "Lucida Console", "Courier New", monospace;
+
+    padding: 6px;
+    margin: 15px;
+    border-radius: 5px;
+}
+code::after {
+    content: "\a";
+    white-space: pre;
+}
+
+imp {
+    color: var(--darkblack);
+    background-color: rgb(192, 192, 192);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Verdana", Sans, serif;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+/* Dark-Light Mode */
+#lightLogo{
+  display: none;
+  color: #f1fbfe;
+  transition: 0.3s;
+}
+#darkLogo{
+  color: #474d50;
+  transition: 0.3s;
+}
+#darkLogo:hover{
+  filter: brightness(0.1);
+  transition: 0.3s;
+}
+#lightLogo:hover{
+  filter: brightness(1.2);
+  transition: 0.3s;
+}
+.dark {
+  --bg-body: var(--dark-body);
+  --bg-main: var(--dark-main);
+  --bg-second: var(--dark-second);
+  --color-hover: var(--dark-hover);
+  --color-txt: var(--dark-text);
+  --shadow: rgba(28, 27, 27, 0.638) 0px 7px 29px 0px;
+  transition: 0.3s;
+}
+.light {
+  --bg-body: var(--light-body);
+  --bg-main: var(--light-main);
+  --bg-second: var(--light-second);
+  --color-hover: var(--light-hover);
+  --color-txt: var(--light-text);
+  --shadow: rgba(75, 75, 80, 0.2) 0px 7px 29px 0px;
+  transition: 0.3s;
+}
+
+
+/* scroll-progressBar */
+#progressBar{
+    position: fixed;
+    top: 65px;
+    left: 0;
+    height: 5px;
+    background: linear-gradient(to right, var(--accent), var(--accentdark));
+    width: 0%;
+    z-index: 100000;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+
+/* Animated Background */
+@keyframes moTion {
+    0% {
+        transform: scale(100%);
+    }
+    50% {
+        transform: scale(500%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
+
+.animatedBackground {
+    z-index: -1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-image: url("https://dl.dropboxusercontent.com/s/1i186um3b5rdixk/blurred-stock-image.jpg?dl=0");
+    animation: 5s ease-out 0s infinite moTion;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+
+/* No-Select */
+.noSelect{
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+
+/* Form */
+.contactForm {
+    margin-top: 150px !important;
+    max-width: 450px; 
+    margin: 0 auto;
+
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: var(--shadow);
+
+    padding: 60px;
+    padding-right: 100px;
+    border-radius: 14px;
+}
+.contactForm input, .contactForm textarea {
+    color: var(--accentdark);
+    background: var(--accentdim2);
+    border: 2px solid var(--accentdim2);
+    padding: 12px 15px;
+    border-radius: 14px;
+    width: 100%;
+    height: 55px;
+
+    font-size: 18px;
+    font-weight: 500;
+}
+.contactForm textarea {
+    resize: none;
+    min-height: 140px;
+}
+.contactForm input:focus, .contactForm textarea:focus {
+    outline: none;
+    border: 2px solid var(--accent);
+    background: var(--accentdim2);
+    box-shadow: var(--shadowsmall);
+}
+.field {
+    margin-bottom: 20px;
+}
+
+/* send button  */
+.btn-contact {
+    font-size: 20px;
+    font-weight: 600;
+
+    border: none;
+    padding: 15px 30px;
+    margin: 20px auto 0;
+    color: var(--accentdim2);
+    background: var(--accent);
+    cursor: pointer;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+.btn-contact:hover {
+    box-shadow: var(--shadowsmall);
+
+    transition: 0.3s;
+}
+
+.btn-contact i {
+    position: relative;
+    left: 2px;
+    font-size: 16px;
+}
+.btn-contact:hover i {
+    left: 8px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+

@@ -1,4 +1,18 @@
 /* Standard Colors */
+/* Bootstrap */
+    /* modal  */
+    /* navbar */
+        /* logo */
+        /* items */
+        /* Menu  */
+/* Sections */
+/* Dark-Light Mode */
+/* No-Select */
+/* Form */
+    /* send button  */
+
+
+/* Standard Colors */
 :root{
   --shadow: 0 0px 40px rgba(0, 92, 179, 0.7);
   --shadowsmall: 0 0px 10px rgba(0, 92, 179, 0.7);
@@ -286,48 +300,6 @@ imp {
   --color-txt: var(--light-text);
   --shadow: rgba(75, 75, 80, 0.2) 0px 7px 29px 0px;
   transition: 0.3s;
-}
-
-
-/* scroll-progressBar */
-#progressBar{
-    position: fixed;
-    top: 65px;
-    left: 0;
-    height: 5px;
-    background: linear-gradient(to right, var(--accent), var(--accentdark));
-    width: 0%;
-    z-index: 100000;
-    transition: 0.3s;
-    border-radius: 10px;
-}
-
-
-/* Animated Background */
-@keyframes moTion {
-    0% {
-        transform: scale(100%);
-    }
-    50% {
-        transform: scale(500%);
-    }
-    100% {
-        transform: scale(100%);
-    }
-}
-
-.animatedBackground {
-    z-index: -1;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    background-image: url("https://dl.dropboxusercontent.com/s/1i186um3b5rdixk/blurred-stock-image.jpg?dl=0");
-    animation: 5s ease-out 0s infinite moTion;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
 }
 
 

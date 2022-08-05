@@ -59,14 +59,14 @@
     animation: shine 5s linear infinite;
 }
 
-.fancyButton {
+.fancyBtn {
     position: relative;
     z-index: 0;
     text-decoration: none;
     padding: 10px 20px;
 }
 
-.fancyButton::after {
+.fancyBtn::after {
     content: "";
     z-index: -1;
     position: absolute;
@@ -80,7 +80,7 @@
     border: none;
 }
 
-.fancyButton::before {
+.fancyBtn::before {
     content: "";
     background: linear-gradient(to right, var(--animDark) 20%, var(--animLight) 40%, var(--animLightest) 60%, var(--animLight) 80%, var(--animDark) 100%);
     position: absolute;
@@ -98,7 +98,7 @@
 }
 
 /* hover */
-.fancyButton:hover::before {
+.fancyBtn:hover::before {
     opacity: 1;
     color: white !important;
     border-radius: 10px;
@@ -106,7 +106,7 @@
     border: none !important;
 }
 
-.fancyButton:active:after {
+.fancyBtn:active:after {
     background: rgba(6, 190, 223, 0.4);
     color: white !important;
     border-radius: 10px;
@@ -114,14 +114,14 @@
     border: none !important;
 }
 
-.fancyButton:active {
+.fancyBtn:active {
     font-weight: bold;
     color: white !important;
     border: none !important;
     text-decoration: none;
 }
 
-.fancyButton:focus {
+.fancyBtn:focus {
     border: none !important;
     text-decoration: none;
 }
@@ -278,3 +278,26 @@
     transform: scale(1.07);
 }
 
+
+/* scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--accentdim2);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--accentdark);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}

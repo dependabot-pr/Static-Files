@@ -2,7 +2,7 @@
 .reveal {
     position: relative;
     opacity: 0;
-    transition: 1s all ease;
+    transition: 1.5s all ease;
 }
 
 .reveal.active {
@@ -55,8 +55,8 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-animation: shine 5s linear infinite;
-    animation: shine 5s linear infinite;
+    -webkit-animation: shine 10s linear infinite;
+    animation: shine 10s linear infinite;
 }
 
 .fancyBtn {

@@ -208,21 +208,22 @@
     animation: 1s ease-out 1 rotate2;
   }
 
+@keyframes rotateX {
+    0% {
+        transform: rotate(360deg);
+    }
 
-/* scroll-progressBar */
-#progressBar{
-    position: fixed;
-    top: 65px;
-    left: 0;
-    height: 5px;
-    background: linear-gradient(to right, var(--accent), var(--accentdark));
-    width: 0%;
-    z-index: 100000;
-    transition: 0.3s;
-    border-radius: 10px;
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
+    .rotateINF {
+        animation: 20s linear infinite rotateX;
+    }
 
+
+    
 /* Animated Background */
 @keyframes moTion {
     0% {
@@ -251,18 +252,43 @@
 }
 
 
-/* scrollTop */
+/* progressBar  */
+#progressBar {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    height: 5px;
+    background: linear-gradient(to right, var(--accent), var(--accentdark));
+    width: 0%;
+    z-index: 1035;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+/* 
+#progressBar {
+    top: 0px;
+    height: 65px;
+    background: linear-gradient(to right, var(--accentdim1), var(--accent));
+    width: 0%;
+    border-radius: 0px;
+    z-index: 10;
+}
+*/
+
+
+/* scrollTop  */
 #scrollTop {
     position: fixed;
     display: none;
-    top: 90%;
-    right: 3%;
-    padding: 5px 20px;
-    font-size: 30px;
+    top: 93%;
+    right: 1%;
+    padding: 3px 15px;
+    font-size: 25px;
     background: var(--accent);
     color: var(--accentdim2);
     border-radius: 100px;
-    transition: 0.1s;
+    transition: 0.15s;
     z-index: 1000;
     text-decoration: none;
 }
@@ -271,13 +297,18 @@
     top: calc(100% - 75px);
 }
 
+@media screen and (min-width: 900px) {
+    #scrollTop::after {
+        content: " Top";
+    }
+}
+
 #scrollTop:hover {
     cursor: pointer;
     filter: brightness(1.3);
     transition: 0.1s;
     transform: scale(1.07);
 }
-
 
 /* scrollbar */
 
@@ -300,4 +331,15 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent);
+}
+
+/* selection  */
+::-moz-selection {
+    color: var(--white);
+    background: rgb(4, 112, 212);
+}
+
+::selection {
+    color: var(--white);
+    background: var(--accentdark);
 }

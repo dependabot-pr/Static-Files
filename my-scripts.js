@@ -36,6 +36,7 @@ function scrollFunction() {
     document.documentElement.scrollTop > 500
   ) {
     scrollTopBTN.classList.add("moveUp");
+    scrollTopBTN.innerHTML = "<i class='fa fa-angle-up'></i>";
     scrollTopBTN.style.display = "block";
   } else {
     scrollTopBTN.style.display = "none";

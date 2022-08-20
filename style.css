@@ -18,7 +18,7 @@
     --shadowsmall: 0 0px 10px rgba(0, 92, 179, 0.7);
     --shadowtiny: 0 0px 5px rgba(0, 92, 179, 0.7);
   
-    --accent: rgba(1, 131, 253, 0.8);
+    --accent: rgb(0, 133, 161);
     --accentdim1: rgb(195, 222, 248);
     --accentdim2: rgb(239, 247, 255);
     --accentdark: rgb(17, 64, 109);
@@ -109,11 +109,11 @@
   }
 
   #hrtLogo:hover {
-      transform: scale(1.1);
-      box-shadow: var(--shadowtiny);
+      transform: scale(1.05);
       transition: 0.15s;
   }
-  
+
+
   /* items */
   .nav-item {
       background-color: var(--accentdim2);
@@ -144,27 +144,27 @@
   
   .barItem a {
       color: var(--white) !important;
-      background-color: var(--accentdark);
+      background-color: var(--accent);
   
       padding: 6px 15px !important;
       margin-right: 10px;
       margin-left: 10px;
   
-      border-radius: 15px;
+      border-radius: 10px;
   
       font-size: 20px;
       font-weight: 600;
   
-      transition: 0.3s;
+      transition: 0.15s;
   }
   
   .barItem a:hover {
-      color: var(--accentdark) !important;
-      background-color: var(--accentdim1);
-      box-shadow: var(--shadowtiny);
+      color: white !important;
+      background-color: var(--accent);
+      box-shadow: var(--shadowsmall);
       
-      border-radius: 25px;
-      transition: 0.3s;
+      border-radius: 5px;
+      transition: 0.15s;
   }
   
   body {
@@ -248,8 +248,8 @@
       user-select: all;
       font-family: "Lucida Console", "Courier New", monospace;
   
-      padding: 6px;
-      margin: 15px;
+      padding: 5px;
+      margin: 5px;
       border-radius: 5px;
   }
   

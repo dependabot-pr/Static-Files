@@ -336,10 +336,10 @@
 /* selection  */
 ::-moz-selection {
     color: var(--white);
-    background: rgb(4, 112, 212);
+    background: var(--accentdark) !important;
 }
 
 ::selection {
     color: var(--white);
-    background: var(--accentdark);
+    background: var(--accentdark) !important;
 }

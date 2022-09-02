@@ -347,6 +347,7 @@
         border-radius: 14px;
         width: 100%;
         height: 55px;
+        margin-bottom: 20px;
 
         font-size: 20px;
         font-weight: 500;
@@ -369,7 +370,8 @@
         margin-bottom: 20px;
     }
 
-    .contactForm input::placeholder {
+    .contactForm input::placeholder,
+    .contactForm textarea::placeholder {
         color: var(--accentdim0);
         font-weight: 400;
         font-size: 17px;

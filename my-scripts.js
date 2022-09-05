@@ -21,16 +21,18 @@ window.addEventListener("scroll", animateBar);
 
 //2. #scrollTop
 var scrollTopBTN = document.getElementById("scrollTop");
+var customNavItem = document.getElementById("customNav");
 
 window.onscroll = function () {
-  scrollFunction();
+  scrollTopFunction();
+  NavScrollFunction();
 };
 
 scrollTopBTN.onclick = function () {
   topFunction();
 };
 
-function scrollFunction() {
+function scrollTopFunction() {
   if (
     document.body.scrollTop > 500 ||
     document.documentElement.scrollTop > 500
@@ -39,7 +41,21 @@ function scrollFunction() {
     scrollTopBTN.innerHTML = "<i class='fa fa-angle-up'></i>";
     scrollTopBTN.style.display = "block";
   } else {
+    scrollTopBTN.style.transition = "0.2s";
     scrollTopBTN.style.display = "none";
+  }
+}
+
+function NavScrollFunction() {
+  if (
+    document.body.scrollTop  > 100 ||
+    document.documentElement.scrollTop  > 100
+  ) {
+    customNavItem.style.boxShadow = "var(--shadowsmall)";
+    customNavItem.style.transition = "0.2s";
+  } else {
+    customNavItem.style.boxShadow = "none";
+    customNavItem.style.transition = "0.2s";
   }
 }
 
@@ -47,3 +63,4 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+

@@ -297,6 +297,12 @@
     top: calc(100% - 75px);
 }
 
+@media screen and (max-height: 700px) {
+    #scrollTop {
+        top: 90% !important;
+    }
+}
+
 @media screen and (min-width: 900px) {
     #scrollTop::after {
         content: " Top";

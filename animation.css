@@ -291,6 +291,7 @@
     transition: 0.15s;
     z-index: 1000;
     text-decoration: none;
+    font-weight: 600;
 }
 
 #scrollTop.active {
@@ -332,7 +333,7 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--accentdark);
-    border-radius: 10px;
+    border-radius: 3px;
 }
 
 /* Handle on hover */

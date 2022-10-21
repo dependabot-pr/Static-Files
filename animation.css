@@ -1,3 +1,26 @@
+/* 
+Reveal  
+text animation
+    motionText
+    fancyBtn
+Slides
+    moveUp
+    moveDown
+    moveLeft
+    moveRight
+Rotation
+    rotateCCW
+    rotateCW
+    rotateINF
+animatedBackground
+#progressBar
+#scrollTop
+> scrollbar
+> selection
+*/
+
+
+
 /* Reveal  */
 .reveal {
     position: relative;
@@ -130,83 +153,95 @@
 
 /* Slides */
 @keyframes slide1 {
-0% {
-  transform: translateY(50%);
+    0% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
-100% {
-  transform: translateY(0);
-}
-}
-  .moveUp {
+
+.moveUp {
     animation: 0.4s ease-out 0s 1 slide1;
-  }
+}
 
 @keyframes slide2 {
-0% {
-  transform: translateY(-50%);
+    0% {
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
-100% {
-  transform: translateY(0);
-}
-}
-  .moveDown {
+
+.moveDown {
     animation: 0.4s ease-out 0s 1 slide2;
-  }
+}
 
 @keyframes slide3 {
-0% {
-  transform: translateX(50%);
+    0% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
-100% {
-  transform: translateX(0);
-}
-}
-  .moveLeft  {
+
+.moveLeft {
     animation: 0.4s ease-out 0s 1 slide3;
-  }
+}
 
 @keyframes slide4 {
-0% {
-  transform: translateX(-50%);
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
-100% {
-  transform: translateX(0);
-}
-}
-  .moveRight {
+
+.moveRight {
     animation: 0.4s ease-out 0s 1 slide4;
-  }
+}
 
 
 
 /* Rotation */
 @keyframes rotate1 {
-  0% {
-    transform: rotate(45deg);
-    opacity:0;
-  }
-  100% {
-    transform: rotate(0deg);
-    opacity:1;
-  }
+    0% {
+        transform: rotate(45deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
 }
-  .rotateCCW {
+
+.rotateCCW {
     animation: 1s ease-out 1 rotate1;
-  }
+}
 
 @keyframes rotate2 {
-  0% {
-    transform: rotate(-45deg);
-    opacity:0;
-  }
-  100% {
-    transform: rotate(0deg);
-    opacity:1;
-  }
+    0% {
+        transform: rotate(-45deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
 }
-  .rotateCW {
+
+.rotateCW {
     animation: 1s ease-out 1 rotate2;
-  }
+}
 
 @keyframes rotateX {
     0% {
@@ -218,20 +253,22 @@
     }
 }
 
-    .rotateINF {
-        animation: 20s linear infinite rotateX;
-    }
+.rotateINF {
+    animation: 20s linear infinite rotateX;
+}
 
 
-    
+
 /* Animated Background */
 @keyframes moTion {
     0% {
         transform: scale(100%);
     }
+
     50% {
         transform: scale(500%);
     }
+
     100% {
         transform: scale(100%);
     }
@@ -248,7 +285,7 @@
 
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
 }
 
 
@@ -325,29 +362,29 @@
     height: 5px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: var(--accentdim2);
-}
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--accentdark);
+    background: var(--accent);
     border-radius: 3px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent);
+    background: var(--accentdim1);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--accentdim3);
 }
 
 /* selection  */
 ::-moz-selection {
     color: var(--white);
-    background: var(--accentdark) !important;
+    background: var(--accentdim0);
 }
 
 ::selection {
     color: var(--white);
-    background: var(--accentdark) !important;
+    background: var(--accentdim0);
 }

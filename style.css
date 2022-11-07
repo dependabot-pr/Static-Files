@@ -784,9 +784,9 @@ imp {
     top: 65px;
     left: 0;
     height: 5px;
-    background: linear-gradient(to right, var(--accent), var(--accentdark));
+    background: linear-gradient(to right, var(--accentdim2), var(--accentdim0));
     width: 0%;
-    z-index: 1035;
+    z-index: 1020;
     transition: 0.3s;
     border-radius: 10px;
 }
@@ -812,7 +812,7 @@ imp {
     padding: 3px 15px;
     font-size: 25px;
     background: var(--accent);
-    color: var(--accentdim2);
+    color: var(--accentdim4);
     border-radius: 100px;
     transition: 0.15s;
     z-index: 1000;
@@ -838,9 +838,9 @@ imp {
 
 #scrollTop:hover {
     cursor: pointer;
-    filter: brightness(1.3);
+    filter: brightness(1.2);
     transition: 0.1s;
-    transform: scale(1.07);
+    transform: scale(1.05);
 }
 
 /* scrollbar */

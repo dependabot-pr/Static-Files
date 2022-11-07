@@ -380,39 +380,37 @@ body {
     transition: 0.15s;
 }
 
-.clr:hover {
+.blk {
+    color: black;
+}
+
+.blk:hover {
     filter: brightness(1.05);
     color: black;
 }
 
 .red {
     background-color: var(--accentred);
-    color: black;
 }
 
 .blue {
     background-color: var(--accentblue);
-    color: black;
 }
 
 .skyblue {
     background-color: rgb(206, 253, 253);
-    color: black;
 }
 
 .green {
     background-color: var(--accentgreen);
-    color: black;
 }
 
 .yellow {
     background-color: var(--accentyellow);
-    color: black;
 }
 
 .purple {
     background-color: var(--accentpurple);
-    color: black;
 }
 
 .black {
@@ -421,18 +419,15 @@ body {
 }
 
 .black:hover {
-    filter: brightness(1.05);
     color: white;
 }
 
 .white {
     background-color: var(--accentwhite);
-    color: black;
 }
 
 .gray {
     background-color: var(--accentgray);
-    color: black;
 }
 
 

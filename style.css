@@ -35,15 +35,29 @@ noSelect
 Form
     contactForm
     contactButton
+#progressBar
+#scrollTop
+> scrollbar
+> selection
 
 */
 
 
 /* Standard Colors */
 :root {
-    --shadow: 0 0px 40px rgba(0, 92, 179, 0.7);
-    --shadowsmall: 0 0px 10px rgba(0, 92, 179, 0.7);
-    --shadowtiny: 0 0px 5px rgba(0, 92, 179, 0.7);
+    --shadow1: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+    --shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+    --shadow2: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+    --shadowsmall: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+    --shadow3: 0 1px 3px rgb(60 63 66 / 32%), 0 4px 12px rgb(60 63 66 / 15%);
+    --shadowtiny: 0 1px 3px rgb(60 63 66 / 32%), 0 4px 12px rgb(60 63 66 / 15%);
+    --shadow4: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+    --shadowborder: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+
+    --accentshadow: 0 5px 5px -3px rgba(0, 171, 223, 0.2), 0 8px 10px 1px rgba(0, 155, 212, 0.14), 0 3px 14px 2px rgba(0, 152, 140, 0.12);
+    --accentshadowsmall: 0 0 10px rgba(0, 128, 255, 0.32), 0 0px 30px rgba(0, 128, 255, 0.15);
+    --accentshadowtiny: 0 1px 3px rgba(0, 128, 255, 0.32), 0 4px 12px rgba(0, 128, 255, 0.15);
+    --accentshadowborder: 0 1px 2px 0 rgba(3, 125, 182, 0.3), 0 1px 3px 1px rgba(0, 124, 165, 0.15);
 
     --accent: rgb(12, 177, 209);
     --accentdim0: rgb(10, 176, 185);
@@ -71,6 +85,17 @@ Form
     --navy: rgb(19, 42, 252);
     --purple: rgb(163, 19, 252);
 
+    --accentred: rgb(253, 206, 188);
+    --accentblue: rgb(188, 206, 253);
+    --accentgreen: rgb(188, 253, 206);
+    --accentyellow: rgb(253, 253, 188);
+    --accentpurple: rgb(206, 188, 253);
+    --accentorange: rgb(253, 188, 206);
+    --accentpink: rgb(253, 188, 253);
+    --accentblack: rgb(91, 91, 91);
+    --accentwhite: rgb(240, 240, 240);
+    --accentgray: rgb(188, 188, 188);
+
     --orangeBackground: linear-gradient(128deg, #ff9a3f, #ff4b40);
     --blueBackground: linear-gradient(128deg, #40afff, #3f61ff);
     --purpleBackground: linear-gradient(128deg, #fc40ff, #543fff);
@@ -78,8 +103,8 @@ Form
     --mixedBackground: radial-gradient(at 95% 7%, #45bcc9 0, rgba(69, 188, 201, .001) 60%),
         radial-gradient(at 95% 93%, #fae500 0, rgba(250, 229, 0, .001) 60%),
         radial-gradient(at 6% 6%, #0060fa 15%, rgba(0, 96, 250, .001) 80%),
-        radial-gradient(at 6% 94%, #fff 0, rgba(255, 255, 255, .001) 60%);    
-    
+        radial-gradient(at 6% 94%, #fff 0, rgba(255, 255, 255, .001) 60%);
+
     --transition: 0.15s;
     --slowtransition: 0.45s;
 
@@ -250,18 +275,22 @@ body {
     margin: 10px;
 }
 
-/* btn-accent */
+
+/* btn */
 .barItem a,
-.btn-accent {
+.btn-accent,
+.contactForm button {
     text-decoration: none;
-    color: var(--white) !important;
+    border: none;
+    color: var(--white);
     background-color: var(--accent);
+    filter: brightness(1);
 
     padding: 6px 15px !important;
     margin-right: 10px;
     margin-left: 10px;
 
-    border-radius: 10px;
+    border-radius: 7px;
 
     font-size: 20px;
     font-weight: 600;
@@ -270,16 +299,17 @@ body {
 }
 
 .barItem a:hover,
-.btn-accent:hover {
-    color: white !important;
-    background-color: var(--accent);
-    box-shadow: var(--shadowtiny);
+.btn-accent:hover,
+.contactForm button:hover {
+    color: white;
 
-    filter: brightness(1.3);
-
+    box-shadow: var(--shadowborder);
     border-radius: 5px;
+    filter: brightness(1.15);
+
     transition: 0.15s;
 }
+
 
 /* google sign in */
 .btn-g {
@@ -350,6 +380,62 @@ body {
     transition: 0.15s;
 }
 
+.clr:hover {
+    filter: brightness(1.05);
+    color: black;
+}
+
+.red {
+    background-color: var(--accentred);
+    color: black;
+}
+
+.blue {
+    background-color: var(--accentblue);
+    color: black;
+}
+
+.skyblue {
+    background-color: rgb(206, 253, 253);
+    color: black;
+}
+
+.green {
+    background-color: var(--accentgreen);
+    color: black;
+}
+
+.yellow {
+    background-color: var(--accentyellow);
+    color: black;
+}
+
+.purple {
+    background-color: var(--accentpurple);
+    color: black;
+}
+
+.black {
+    background-color: var(--accentblack);
+    color: white;
+}
+
+.black:hover {
+    filter: brightness(1.05);
+    color: white;
+}
+
+.white {
+    background-color: var(--accentwhite);
+    color: black;
+}
+
+.gray {
+    background-color: var(--accentgray);
+    color: black;
+}
+
+
 /* Sections */
 .mainSection {
     display: flex;
@@ -405,6 +491,7 @@ body {
     background-color: var(--accent);
     color: white;
 }
+
 .inskew-down {
     transform: skew(0deg, 3deg);
 }
@@ -417,6 +504,7 @@ body {
     background-color: var(--accent);
     color: white;
 }
+
 .inskew-up {
     transform: skew(0deg, -3deg);
 }
@@ -583,49 +671,51 @@ imp {
 
 /* Form */
 .contactForm {
-    margin-top: 150px;
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: 50px auto 50px auto;
 
-    background: #fff;
-    border: 1px solid #ccc;
-    box-shadow: var(--shadow);
+    box-shadow: var(--accentshadowtiny);
 
-    padding: 60px;
-    padding-right: 100px;
-    border-radius: 14px;
+    padding: 0px 50px 20px 50px;
+    border-radius: 10px;
+}
+
+.contactForm h1 {
+    text-align: center;
+    padding: 35px 0px 35px 0px;
+    color: var(--accent);
+    cursor: default;
+    user-select: none;
 }
 
 .contactForm input,
 .contactForm textarea {
     color: var(--accentdark);
-    background: var(--accentdim3);
-    border: 2px solid var(--accentdim2);
-    padding: 12px 15px;
-    border-radius: 14px;
+    background: var(--accentdim4);
+    border: 2px solid var(--accentdim3);
+    padding: 0 15px 0 15px;
+    border-radius: 7px;
     width: 100%;
-    height: 55px;
+    height: 50px;
     margin-bottom: 20px;
 
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
+    transition: 0.15s;
 }
 
 .contactForm textarea {
     resize: none;
     min-height: 140px;
+    transition: 0.15s;
 }
 
 .contactForm input:focus,
 .contactForm textarea:focus {
     outline: none;
     border: 2px solid var(--accent);
-    background: var(--accentdim2);
-    box-shadow: none;
-}
-
-.field {
-    margin-bottom: 20px;
+    background: var(--accentdim4);
+    transition: 0.15s;
 }
 
 .contactForm input::placeholder,
@@ -633,7 +723,10 @@ imp {
     color: var(--accentdim0);
     font-weight: 400;
     font-size: 17px;
+    transition: 0.15s;
 }
+
+
 
 /* send button  */
 .contactButton {
@@ -686,4 +779,106 @@ imp {
     cursor: pointer;
 
     transition: 0.3s;
+}
+
+
+
+/* progressBar  */
+#progressBar {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    height: 5px;
+    background: linear-gradient(to right, var(--accent), var(--accentdark));
+    width: 0%;
+    z-index: 1035;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+/* 
+#progressBar {
+    top: 0px;
+    height: 65px;
+    background: linear-gradient(to right, var(--accentdim1), var(--accent));
+    width: 0%;
+    border-radius: 0px;
+    z-index: 10;
+}
+*/
+
+
+/* scrollTop  */
+#scrollTop {
+    position: fixed;
+    display: none;
+    top: 93%;
+    right: 1%;
+    padding: 3px 15px;
+    font-size: 25px;
+    background: var(--accent);
+    color: var(--accentdim2);
+    border-radius: 100px;
+    transition: 0.15s;
+    z-index: 1000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#scrollTop.active {
+    top: calc(100% - 75px);
+}
+
+@media screen and (max-height: 700px) {
+    #scrollTop {
+        top: 90% !important;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #scrollTop::after {
+        content: " Top";
+    }
+}
+
+#scrollTop:hover {
+    cursor: pointer;
+    filter: brightness(1.3);
+    transition: 0.1s;
+    transform: scale(1.07);
+}
+
+/* scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accentdim1);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--accentdim3);
+}
+
+/* selection  */
+::-moz-selection {
+    color: var(--white);
+    background: var(--accentdim0);
+}
+
+::selection {
+    color: var(--white);
+    background: var(--accentdim0);
 }

@@ -13,6 +13,8 @@ Rotation
     rotateCW
     rotateINF
 animatedBackground
+
+//patch
 */
 
 
@@ -283,3 +285,23 @@ animatedBackground
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+/* patch */
+.Reader .year {
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: left !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+.Reader .monthName {
+    width: 200px !important;
+}
+
+.Reader .year::-webkit-scrollbar {
+    height: 20px !important;
+}
+
